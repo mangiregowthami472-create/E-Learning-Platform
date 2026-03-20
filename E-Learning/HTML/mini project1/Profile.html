@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #e3f2fd; }
+        nav { background: navy; color: white; padding: 15px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .nav-active { font-weight: bold; color: yellow; }
+        .card { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; }
+        .stats { display: flex; gap: 20px; flex-wrap: wrap; }
+        .stat { background: #2196f3; color: white; padding: 20px; border-radius: 10px; text-align: center; flex: 1; min-width: 150px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Dashboard.html">🏠 Dashboard</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="Quiz.html">❓ Quiz</a>
+        <a href="Profile.html" class="nav-active">👤 Profile</a>
+    </nav>
+
+    <h1>👤 Your Profile</h1>
+    
+    <div class="stats">
+        <div class="stat">
+            <h2>5</h2>
+            <p>Total Courses</p>
+        </div>
+        <div class="stat">
+            <h2 id="completed">0</h2>
+            <p>Completed</p>
+        </div>
+        <div class="stat">
+            <h2>85%</h2>
+            <p>Avg Score</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📋 Profile Info</h3>
+        <p><strong>Name:</strong> Gowthami</p>
+        <p><strong>City:</strong> Chittoor</p>
+        <p><strong>Joined:</strong> March 2026</p>
+        <p><strong>Course Completed:</strong> Web Development</p>
+    </div>
+</body>
+</html>

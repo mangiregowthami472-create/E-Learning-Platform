@@ -1,0 +1,101 @@
+/* Dashboard grid - flexbox was being weird so used grid */
+#courseCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Course cards flex */
+.course-item {
+    display: flex !important;
+    flex-direction: column;
+}
+
+.course-item .card-body {
+    flex: 1;
+}
+
+/* Nav hover effects - added this later */
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+    transform: scale(1.05);
+    transition: all 0.2s;
+}
+
+/* Radio buttons - had to override bootstrap */
+.form-check input:checked + label {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white !important;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Table stripes */
+table tbody tr:nth-of-type(even) {
+    background-color: #f8f9fa;
+}
+
+table tbody tr:hover {
+    background-color: #e3f2fd !important;
+    transform: scale(1.01);
+}
+
+/* Loading spinner - copied from stackoverflow */
+.loading {
+    text-align: center;
+    padding: 50px;
+    color: #6c757d;
+}
+
+.loading::after {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Mobile fixes - tested on my phone */
+@media (max-width: 768px) {
+    #courseCards {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        margin-bottom: 15px;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .breadcrumb {
+        margin-bottom: 20px;
+    }
+}
+
+/* Scrollbar cuz it looks cool */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #adb5bd;
+    border-radius: 3px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #e3f2fd; }
+        nav { background: navy; color: white; padding: 15px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .nav-active { font-weight: bold; color: yellow; }
+        .question { background: white; padding: 20px; margin: 20px 0; border-radius: 10px; }
+        button { background: blue; color: white; padding: 12px 24px; border: none; border-radius: 5px; }
+        #result { background: #d4edda; padding: 20px; margin: 20px 0; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Dashboard.html">🏠 Dashboard</a>
+        <a href="courses.html">📚 Courses</a>
+        <a href="Quiz.html" class="nav-active">❓ Quiz</a>
+        <a href="Profile.html">👤 Profile</a>
+    </nav>
+
+    <h1>🧠 Take Quiz</h1>
+    
+<div class="question">
+        <h3>1.Which tag is used to insert an image?</h3>
+        <label><input type="radio" name="q1" value="1"> img </label><br>
+        <label><input type="radio" name="q1" value="0"> src </label><br>
+        <label><input type="radio" name="q1" value="0"> image </label><br>
+        <label><input type="radio" name="q1" value="0"> pic </label><br>
+    </div>   
+<div class="question">
+        <h3>2.What does CSS stand for?</h3>
+        <label><input type="radio" name="q2" value="0">Computer Style Sheets</label><br>
+        <label><input type="radio" name="q2" value="1">Cascading Style Sheets</label><br>
+        <label><input type="radio" name="q2" value="0">Creative Style System</label><br>
+        <label><input type="radio" name="q2" value="0">Colorful Style Sheets</label><br>
+    </div>
+    <div class="question">
+    <h3>3.Which property controls spacing inside an element?</h3>
+        <label><input type="radio" name="q3" value="0">margin</label><br>
+        <label><input type="radio" name="q3" value="1">padding</label><br>
+        <label><input type="radio" name="q3" value="0">border</label><br>
+        <label><input type="radio" name="q3" value="0">spacing</label><br>
+    </div>
+        <div class="question">
+    <h3>4.Which keyword is used to declare a variable?</h3>
+        <label><input type="radio" name="q4" value="1">var</label><br>
+        <label><input type="radio" name="q4" value="0">int</label><br>
+        <label><input type="radio" name="q4" value="0">string</label><br>
+        <label><input type="radio" name="q4" value="0">variable</label><br>
+        </div>
+     
+    <button onclick="checkQuiz()">Submit Quiz</button>
+    
+    <div id="result" style="display:none;">
+        <h2>Your Score: <span id="score">0</span>/4</h2>
+        <div id="grade"></div>
+    </div>
+
+    <script>
+        function checkQuiz() {
+            let score = 0;
+
+            if(document.querySelector('input[name="q1"]:checked')?.value == 1) score++; 
+            if(document.querySelector('input[name="q2"]:checked')?.value == 1) score++;
+             if(document.querySelector('input[name="q3"]:checked')?.value == 1) score++;
+              if(document.querySelector('input[name="q4"]:checked')?.value == 1) score++;
+            document.getElementById('score').innerText = score;
+            document.getElementById('result').style.display = 'block';
+            let grade;
+            if(score == 4) grade = "A - Excellent! ⭐";
+            else if(score == 3) grade = "B - Good! 👍";
+            else grade = "C - Try Again! 📚"; 
+            document.getElementById('grade').innerHTML = grade;
+        }
+    </script>
+</body>
+</html>

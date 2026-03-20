@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #e3f2fd; }
+        nav { background: navy; color: white; padding: 15px; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        .nav-active { font-weight: bold; color: yellow; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background: navy; color: white; }
+        button { background: green; color: white; border: none; padding: 8px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Dashboard.html">🏠 Dashboard</a>
+        <a href="Courses.html" class="nav-active">📚 Courses</a>
+        <a href="Quiz.html">❓ Quiz</a>
+        <a href="Profile.html">👤 Profile</a>
+    </nav>
+
+    <h1>📖 All Courses</h1>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Lessons</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>WD101</td>
+            <td>Web Development</td>
+            <td>
+                <ol>
+                    <li>HTML ✅</li>
+                    <li>CSS ✅</li>
+                    <li>JavaScript</li>
+                    <li>Design</li>
+                </ol>
+            </td>
+            <td><button onclick="alert('Course Complete!')">Complete</button></td>
+        </tr>
+        <tr>
+            <td>DS201</td>
+            <td>Data Science</td>
+            <td>
+                <ol>
+                    <li>Python ✅</li>
+                    <li>Math</li>
+                    <li>Charts</li>
+                    <li>AI</li>
+                </ol>
+            </td>
+            <td><button onclick="alert('Course Complete!')">Complete</button></td>
+        </tr>
+        <tr>
+            <td>DA301</td>
+            <td>Data Analyst</td>
+            <td>
+                <ol>
+                    <li>HTML ✅</li>
+                    <li>CSS ✅</li>
+                    <li>JavaScript</li>
+                    <li>React </li>
+                </ol>
+            </td>
+            <td><button onclick="alert('Course Complete!')">Complete</button></td>
+        </tr>
+         <tr>
+            <td>ML401</td>
+            <td>Machine Learning</td>
+            <td>
+                <ol>
+                    <li>Python ✅</li>
+                    <li>Supervised Learning</li>
+                    <li>UnSupervised Learning</li>
+                    <li>Model Evaluation</li>
+                </ol>
+            </td>
+            <td><button onclick="alert('Course Complete!')">Complete</button></td>
+        </tr>
+         <tr>
+            <td>AI501</td>
+            <td>Artificial Intelligence</td>
+            <td>
+                <ol>
+                    <li>Basics ✅</li>
+                    <li>Search Algorithms</li>
+                    <li>Computer Vision✅</li>
+                    <li>NLP</li>
+                </ol>
+            </td>
+            <td><button onclick="alert('Course Complete!')">Complete</button></td>
+        </tr>
+    </table>
+</body>
+</html>
