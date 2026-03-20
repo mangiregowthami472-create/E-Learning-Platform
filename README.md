@@ -1,1 +1,1 @@
-# E-Learning-Platform
+The E-Learning Platform is a web-based application designed to provide an interactive online learning experience. It allows users to explore courses, access study materials, and enhance their skills from anywhere.
